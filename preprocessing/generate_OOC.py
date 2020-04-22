@@ -1,0 +1,39 @@
+
+
+
+text_data=[]
+filepath = '/home/saini/PycharmProjects/Microblog_Summ_three_objectives/preprocessing/clean_tweets/hangupit/clean3_hangupit_unique_tweets.csv'
+with open(filepath) as fp:
+   for cnt, line in enumerate(fp):
+       text_data.append(line)  ##load the actual tweets from file
+
+
+#print text_data[0]
+import gensim
+
+
+# Load Google's pre-trained Word2Vec model.
+model =  gensim.models.KeyedVectors.load_word2vec_format('crisisNLP_word_vector.bin', binary=True)  
+print model['philippines']
+file1=open('OOV_hangup.txt','w')
+
+
+for i in range(len(text_data)):
+	a=text_data[i]
+	tokens=a.split(' ')
+	print tokens
+	for j in tokens:
+			j=j.strip()#print "words :", j
+			try:
+				model[j]
+			 	#print "word vector: ", model[j][0:5]
+				#print "word={0} is found in word2vec with tweet number {1}".format(j,i)		
+				#else:
+				#file1.write(str(i)+'\t'+str(j)+'\n')
+			except:
+				print "word={0} is not found, tweet number {1}".format(j,i)
+				file1.write(str(i)+'\t'+str(j)+'\n')
+	print "========================================================"
+	
+
+
