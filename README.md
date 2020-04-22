@@ -37,5 +37,18 @@ a)	Create a folder with any name in the ‘Output’ folder and input the same n
 b)	To run the program, go to ‘examples’ folder and run the file ‘main_hblast1.py’ and give the required number parameters from an user end.  Note that this file is for ‘Bomb blast in Hyderabad’ dataset. Other files exist of different datasets. 
 
 
+Pubication:
+-----------------------------------------------------------------------
+This work is published in IEEE Transactions on Computational Social Systems. To cite this paper use the following bibtex: 
 
+@article{saini2019multiobjective,
+  title={Multiobjective-Based Approach for Microblog Summarization},
+  author={Saini, Naveen and Saha, Sriparna and Bhattacharyya, Pushpak},
+  journal={IEEE Transactions on Computational Social Systems},
+  volume={6},
+  number={6},
+  pages={1219--1231},
+  year={2019},
+  publisher={IEEE}
+}
 
